@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>filepicker.io test</title>
+    <script src="https://api.filepicker.io/v0/filepicker.js"></script>
+  </head>
+  <body bgcolor="#ffffff">
+  <script type="text/javascript">
+    var key = 'AuGMkOvLJTyeWMASe2nzzz';
+    filepicker.setKey(key);
+
+    filepicker.getFile(filepicker.MIMETYPES.IMAGES, {'modal': true, 'services': [filepicker.SERVICES.DROPBOX, filepicker.SERVICES.GOOGLE_DRIVE, filepicker.SERVICES.URL, filepicker.SERVICES.GITHUB, filepicker.SERVICES.FACEBOOK]}, 
+      function(url, metadata) {
+        alert('File uploaded as ' + url);
+      }
+    );
+  </script>
+  </body>
+</html>
+
